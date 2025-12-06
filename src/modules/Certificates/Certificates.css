@@ -1,0 +1,55 @@
+.certificates-module {
+    padding-bottom: var(--spacing-xl);
+}
+
+.cert-header {
+    margin-bottom: var(--spacing-xl);
+}
+
+.cert-title {
+    font-size: 2rem;
+    color: var(--color-text);
+    margin-bottom: var(--spacing-sm);
+}
+
+.cert-subtitle {
+    color: var(--color-text-light);
+    font-size: var(--font-size-lg);
+}
+
+.cert-steps {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: var(--spacing-xl);
+    border-bottom: 1px solid var(--color-border);
+    padding-bottom: var(--spacing-md);
+}
+
+.cert-step {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    color: var(--color-text-light);
+    font-size: var(--font-size-sm);
+}
+
+.cert-step--active {
+    color: var(--color-primary);
+    font-weight: 600;
+}
+
+.cert-step__number {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: #E5E7EB;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+}
+
+.cert-step--active .cert-step__number {
+    background-color: var(--color-primary);
+    color: white;
+}
