@@ -125,10 +125,12 @@ const Step1_Home = () => {
                         </div>
                     </section>
 
-                    <div className="flex justify-end gap-md mt-xl relative">
-                        <InteractionHint message="Clic para continuar" position="top" />
+                    <div className="flex justify-end gap-md mt-xl">
                         <Button variant="secondary" onClick={() => navigate('/')}>Volver</Button>
-                        <Button onClick={() => navigate('datos')}>Continuar</Button>
+                        <div style={{ position: 'relative' }}>
+                            <InteractionHint message="Clic en 'Continuar'" position="right" />
+                            <Button onClick={() => navigate('datos')}>Continuar</Button>
+                        </div>
                     </div>
                 </div>
 

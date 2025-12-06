@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Button from '../../components/Button';
 import Card from '../../components/Card';
+import InteractionHint from '../../components/InteractionHint';
 
 const Step4_Review = () => {
     const navigate = useNavigate();
@@ -92,7 +93,8 @@ const Step4_Review = () => {
                     <div className="mb-xl">
                         <h3 className="font-bold mb-md">Autorización de tratamiento de datos</h3>
 
-                        <div className="flex gap-sm items-start p-md bg-gray-50 rounded" style={{ backgroundColor: '#F9FAFB' }}>
+                        <div className="flex gap-sm items-start p-md bg-gray-50 rounded" style={{ backgroundColor: '#F9FAFB', position: 'relative' }}>
+                            <InteractionHint message="Obligatorio" position="right" />
                             <input
                                 type="checkbox"
                                 id="terms"
@@ -108,7 +110,10 @@ const Step4_Review = () => {
 
                     <div className="flex justify-end gap-md mt-xl">
                         <Button variant="secondary" onClick={handleBack}>Volver</Button>
-                        <Button onClick={handleSubmit} disabled={!agreed} className={!agreed ? 'opacity-50 cursor-not-allowed' : ''}>Enviar</Button>
+                        <div style={{ position: 'relative' }}>
+                            <InteractionHint message="Clic en 'Enviar'" position="right" />
+                            <Button onClick={handleSubmit} disabled={!agreed} className={!agreed ? 'opacity-50 cursor-not-allowed' : ''}>Enviar</Button>
+                        </div>
                     </div>
                 </div>
 

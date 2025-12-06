@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import Button from '../../components/Button';
 import Card from '../../components/Card';
 import Input from '../../components/Input';
+import InteractionHint from '../../components/InteractionHint';
 
 const Step2_Data = () => {
     const navigate = useNavigate();
@@ -90,7 +91,10 @@ const Step2_Data = () => {
 
                     <div className="flex justify-end gap-md mt-xl">
                         <Button variant="secondary" onClick={handleBack}>Volver</Button>
-                        <Button onClick={handleContinue}>Continuar</Button>
+                        <div style={{ position: 'relative' }}>
+                            <InteractionHint message="Clic en 'Continuar'" position="right" />
+                            <Button onClick={handleContinue}>Continuar</Button>
+                        </div>
                     </div>
                 </div>
 

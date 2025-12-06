@@ -33,14 +33,38 @@
     transform: scale(0.95);
     box-shadow: 0 0 0 0 rgba(51, 102, 204, 0.7);
   }
-  
+
   70% {
     transform: scale(1);
     box-shadow: 0 0 0 10px rgba(51, 102, 204, 0);
   }
-  
+
   100% {
     transform: scale(0.95);
     box-shadow: 0 0 0 0 rgba(51, 102, 204, 0);
   }
+}
+
+.interaction-hint.top {
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%) translateY(-100%);
+}
+
+.interaction-hint.right {
+  top: 50%;
+  right: -20px;
+  transform: translateY(-50%) translateX(100%);
+}
+
+.interaction-hint.bottom {
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%) translateY(100%);
+}
+
+.interaction-hint.left {
+  top: 50%;
+  left: -20px;
+  transform: translateY(-50%) translateX(-100%);
 }

@@ -69,9 +69,11 @@ const Step1_Home = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className="flex flex-col gap-sm items-end relative">
-                            <InteractionHint message="Haz clic aquí para iniciar" position="right" />
-                            <Button onClick={handleStartProcess}>Iniciar trámite</Button>
+                        <div className="flex flex-col gap-sm items-end">
+                            <div style={{ position: 'relative' }}>
+                                <InteractionHint message="Clic en 'Iniciar trámite'" position="right" />
+                                <Button onClick={handleStartProcess}>Iniciar trámite</Button>
+                            </div>
                             <Button variant="ghost" size="small">Ver requisitos</Button>
                         </div>
                     </Card>
