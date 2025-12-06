@@ -5,11 +5,14 @@ import Home from './modules/Home/Home';
 import CertificatesFlow from './modules/Certificates/CertificatesFlow';
 import PQRSFlow from './modules/PQRS/PQRSFlow';
 
+import GeneralInfo from './modules/GeneralInfo/GeneralInfo';
+
 function App() {
   return (
     <Routes>
       <Route path="/" element={<MainLayout />}>
         <Route index element={<Home />} />
+        <Route path="general-info" element={<GeneralInfo />} />
         <Route path="certificados/*" element={<CertificatesFlow />} />
         <Route path="pqrs/*" element={<PQRSFlow />} />
       </Route>

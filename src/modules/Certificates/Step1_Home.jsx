@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { Search, User, Users, ShieldCheck } from 'lucide-react';
 import Button from '../../components/Button';
 import Card from '../../components/Card';
+import InteractionHint from '../../components/InteractionHint';
 
 const Step1_Home = () => {
     const navigate = useNavigate();
@@ -68,7 +69,8 @@ const Step1_Home = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className="flex flex-col gap-sm items-end">
+                        <div className="flex flex-col gap-sm items-end relative">
+                            <InteractionHint message="Haz clic aquí para iniciar" position="right" />
                             <Button onClick={handleStartProcess}>Iniciar trámite</Button>
                             <Button variant="ghost" size="small">Ver requisitos</Button>
                         </div>

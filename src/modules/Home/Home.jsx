@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { FileText, MessageSquare } from 'lucide-react';
+import { FileText, MessageSquare, Info } from 'lucide-react';
 import Card from '../../components/Card';
 import Button from '../../components/Button';
 import './Home.css';
@@ -20,7 +20,7 @@ const Home = () => {
                     <div className="home__icon-wrapper">
                         <FileText size={48} color="var(--color-primary)" />
                     </div>
-                    <h2 className="home__card-title">Solicitud de Certificados</h2>
+                    <h2 className="home__card-title">Flujo: Solicitud de Certificados</h2>
                     <p className="home__card-desc">
                         Simulación del proceso de solicitud de certificados estudiantiles para diferentes perfiles.
                     </p>
@@ -31,9 +31,22 @@ const Home = () => {
 
                 <Card className="home__card">
                     <div className="home__icon-wrapper">
+                        <Info size={48} color="var(--color-primary)" />
+                    </div>
+                    <h2 className="home__card-title">Información General</h2>
+                    <p className="home__card-desc">
+                        Consulta la introducción, objetivos, alcance y guías de uso del manual.
+                    </p>
+                    <Link to="/general-info">
+                        <Button fullWidth>Ver Información</Button>
+                    </Link>
+                </Card>
+
+                <Card className="home__card">
+                    <div className="home__icon-wrapper">
                         <MessageSquare size={48} color="var(--color-primary)" />
                     </div>
-                    <h2 className="home__card-title">Generación de PQRS</h2>
+                    <h2 className="home__card-title">Flujo: Generación de PQRS</h2>
                     <p className="home__card-desc">
                         Simulación del proceso de radicación de Peticiones, Quejas, Reclamos y Denuncias.
                     </p>

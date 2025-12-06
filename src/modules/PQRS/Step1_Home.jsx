@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { MessageSquare, AlertCircle, HelpCircle, FileText } from 'lucide-react';
 import Button from '../../components/Button';
 import Card from '../../components/Card';
+import InteractionHint from '../../components/InteractionHint';
 
 const Step1_Home = () => {
     const navigate = useNavigate();
@@ -124,7 +125,8 @@ const Step1_Home = () => {
                         </div>
                     </section>
 
-                    <div className="flex justify-end gap-md mt-xl">
+                    <div className="flex justify-end gap-md mt-xl relative">
+                        <InteractionHint message="Clic para continuar" position="top" />
                         <Button variant="secondary" onClick={() => navigate('/')}>Volver</Button>
                         <Button onClick={() => navigate('datos')}>Continuar</Button>
                     </div>
